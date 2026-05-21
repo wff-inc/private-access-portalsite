@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 950" role="img" aria-labelledby="title desc">
+  <title id="title">Neon cultural exchange avenue</title>
+  <desc id="desc">A cinematic futuristic city avenue with magenta and cyan light trails, inspired by a cultural exchange venue.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050713"/>
+      <stop offset=".42" stop-color="#101345"/>
+      <stop offset="1" stop-color="#050710"/>
+    </linearGradient>
+    <linearGradient id="road" x1=".5" y1=".24" x2=".5" y2="1">
+      <stop offset="0" stop-color="#11142c"/>
+      <stop offset=".48" stop-color="#1a1c3a"/>
+      <stop offset="1" stop-color="#05060c"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00f0ff"/>
+      <stop offset=".62" stop-color="#b8ffff"/>
+      <stop offset="1" stop-color="#7df7ff"/>
+    </linearGradient>
+    <linearGradient id="magentaGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff37f8"/>
+      <stop offset=".55" stop-color="#ffc7ff"/>
+      <stop offset="1" stop-color="#c25cff"/>
+    </linearGradient>
+    <linearGradient id="culturePulse" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#33f8ff"/>
+      <stop offset=".32" stop-color="#806cff"/>
+      <stop offset=".68" stop-color="#ff4cf4"/>
+      <stop offset="1" stop-color="#fff2a6"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx=".52" cy=".58" r=".55">
+      <stop offset="0" stop-color="#ddfaff" stop-opacity=".95"/>
+      <stop offset=".22" stop-color="#85ecff" stop-opacity=".35"/>
+      <stop offset=".56" stop-color="#b14cff" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 .11"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="950" fill="url(#sky)"/>
+  <rect y="392" width="1600" height="558" fill="url(#road)"/>
+  <ellipse cx="818" cy="564" rx="720" ry="345" fill="url(#centerGlow)"/>
+
+  <g opacity=".98">
+    <path d="M0 950 692 442h216L1600 950Z" fill="#090b16"/>
+    <path d="M368 950 728 442h143L1228 950Z" fill="#171a33"/>
+    <path d="M664 950 770 442h59L940 950Z" fill="#242448" opacity=".78"/>
+  </g>
+
+  <g filter="url(#softGlow)" opacity=".92">
+    <path d="M-80 873 738 521" stroke="url(#cyanGlow)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M-60 928 748 527" stroke="url(#magentaGlow)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M1535 935 870 526" stroke="url(#cyanGlow)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M1660 854 882 518" stroke="url(#magentaGlow)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M230 950 763 528" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".85"/>
+    <path d="M1380 950 842 528" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".82"/>
+    <path d="M770 950 798 520" stroke="#00ecff" stroke-width="4" opacity=".95"/>
+    <path d="M855 950 816 520" stroke="#ff63ff" stroke-width="4" opacity=".95"/>
+  </g>
+
+  <g fill="#090b1d">
+    <path d="M0 0h145v950H0Z"/>
+    <path d="M142 86h142v864H142Z"/>
+    <path d="M310 0h122v950H310Z"/>
+    <path d="M447 118h108v832H447Z"/>
+    <path d="M571 176h88v774H571Z"/>
+    <path d="M951 176h98v774h-98Z"/>
+    <path d="M1068 64h127v886h-127Z"/>
+    <path d="M1210 0h154v950h-154Z"/>
+    <path d="M1378 98h112v852h-112Z"/>
+    <path d="M1500 0h100v950h-100Z"/>
+  </g>
+
+  <g fill="#161833" opacity=".82">
+    <rect x="74" y="34" width="106" height="188"/>
+    <rect x="193" y="334" width="128" height="168"/>
+    <rect x="506" y="86" width="102" height="216"/>
+    <rect x="1008" y="224" width="116" height="180"/>
+    <rect x="1295" y="72" width="114" height="232"/>
+    <rect x="1450" y="420" width="98" height="160"/>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <rect x="72" y="40" width="104" height="180" fill="#e64cff" opacity=".9"/>
+    <rect x="194" y="338" width="126" height="158" fill="#a6fbff" opacity=".92"/>
+    <rect x="502" y="0" width="83" height="118" fill="#16e8ff" opacity=".72"/>
+    <rect x="1008" y="232" width="112" height="160" fill="#ff46e6" opacity=".7"/>
+    <rect x="1320" y="92" width="95" height="196" fill="#4cf6ff" opacity=".58"/>
+  </g>
+
+  <g opacity=".78">
+    <g fill="#59f4ff">
+      <rect x="370" y="198" width="16" height="8"/>
+      <rect x="402" y="274" width="12" height="8"/>
+      <rect x="474" y="310" width="10" height="10"/>
+      <rect x="334" y="452" width="15" height="7"/>
+      <rect x="622" y="374" width="8" height="8"/>
+      <rect x="1167" y="230" width="12" height="9"/>
+      <rect x="1268" y="352" width="10" height="8"/>
+      <rect x="1424" y="210" width="15" height="8"/>
+    </g>
+    <g fill="#ff4cf8">
+      <rect x="512" y="420" width="16" height="7"/>
+      <rect x="1106" y="172" width="12" height="8"/>
+      <rect x="1224" y="468" width="18" height="8"/>
+      <rect x="1398" y="338" width="12" height="9"/>
+      <rect x="1538" y="282" width="10" height="8"/>
+    </g>
+  </g>
+
+  <g filter="url(#softGlow)" opacity=".84">
+    <path d="M515 382H686l76 152 73-236 78 236 74-152h220" fill="none" stroke="url(#culturePulse)" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M515 382H686l76 152 73-236 78 236 74-152h220" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" opacity=".82"/>
+  </g>
+
+  <g opacity=".28">
+    <path d="M0 684h1600" stroke="#fff" stroke-width="48"/>
+    <path d="M0 738h1600" stroke="#ffb6ff" stroke-width="22"/>
+  </g>
+
+  <rect width="1600" height="950" filter="url(#grain)" opacity=".42"/>
+  <rect width="1600" height="950" fill="none" stroke="#f4f0e7" stroke-width="2" opacity=".35"/>
+</svg>

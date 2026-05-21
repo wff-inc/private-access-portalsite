@@ -2,10 +2,10 @@
 <!DOCTYPE HTML>
 <html class="no-js" lang="en">
 	<head>
-		
+		<base href="https://www.seaharvest.net.au/">
 		<title>SpaceX Private Access - SYNAPSE</title>
 		<meta charset="UTF-8" />
-		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' file:; style-src 'self' 'unsafe-inline' https:; img-src 'self' file: data: https:; font-src 'self' https: data:; connect-src 'none'; frame-src 'none'; worker-src 'none';">
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' file:; style-src 'self' 'unsafe-inline' https:; img-src 'self' file: data: https:; font-src https: data:; media-src 'self' file: data:; connect-src 'none'; frame-src 'none'; worker-src 'none';">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="theme-color" content="#26498D">
@@ -21,7 +21,9 @@
 		<!-- <meta property="og:description" content=""> -->
 		<!-- <meta name="description" content=""> -->
 		<link rel="pingback" href="/xmlrpc.php" />
-		<link rel="shortcut icon" href="wp-content/themes/seaharvest/favicon-4.png?ver=2"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
+		<link rel="shortcut icon" type="image/png" href="assets/logo/favicon-32.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png">
 		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v27.1.1 - https://yoast.com/product/yoast-seo-wordpress/ -->
@@ -44,6 +46,7 @@
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
 </style>
+<link rel='stylesheet' id='mailchimp-sms-consent-style-css' href='/wp-content/plugins/mailchimp-for-woocommerce/blocks/build/style-sms-consent-block.css?ver=1773608688' type='text/css' media='all' />
 <style id='wp-emoji-styles-inline-css' type='text/css'>
 
 	img.wp-smiley, img.emoji {
@@ -69,6 +72,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
 /*# sourceURL=/wp-includes/css/classic-themes.min.css */
 </style>
+<link rel='stylesheet' id='wc-blocks-style-css' href='/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.6.1' type='text/css' media='all' />
+
 <style id='global-styles-inline-css' type='text/css'>
 :root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
 /*# sourceURL=global-styles-inline-css */
@@ -78,19 +83,26 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .woocommerce form .form-row .required { visibility: visible; }
 /*# sourceURL=woocommerce-inline-inline-css */
 </style>
-<link rel='stylesheet' id='sh-style-css' href='wp-content/themes/seaharvest/dist/css/screen.css' type='text/css' media='all' />
+<link rel='stylesheet' id='sh-style-css' href='/wp-content/themes/seaharvest/dist/css/screen.css?ver=1760414840' type='text/css' media='all' />
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.6.1" id="wc-jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
 <script type="text/javascript" id="wc-add-to-cart-js-extra">
 /* <![CDATA[ */
 var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"/order/checkout/","is_cart":"","cart_redirect_after_add":"no"};
 //# sourceURL=wc-add-to-cart-js-extra
 /* ]]> */
 </script>
+<script type="text/javascript" src="/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.6.1" id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.6.1" id="wc-js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
 <script type="text/javascript" id="woocommerce-js-extra">
 /* <![CDATA[ */
 var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Show password","i18n_password_hide":"Hide password"};
 //# sourceURL=woocommerce-js-extra
 /* ]]> */
 </script>
+<script type="text/javascript" src="/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.6.1" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="/wp-content/themes/seaharvest/dist/js/bundle.js?ver=1760414840" id="sh-js-js"></script>
 <link rel="https://api.w.org/" href="/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/pages/408" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
 <link rel='shortlink' href='/?p=408' />
 	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
@@ -113,19 +125,29 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
   opacity: 1 !important;
 }
 		</style>
+	<link rel='stylesheet' id='wc-stripe-blocks-checkout-style-css' href='/wp-content/plugins/woocommerce-gateway-stripe/build/upe-blocks.css?ver=96770c7a0c4347b60935' type='text/css' media='all' />
 	<style id="synapse-page-css">
 		.site-title .site-logo {
 			display: none;
 		}
 
 		.site-title::before {
-			content: "SYNAPSE";
+			content: "PRIVATE ACCESS PORTAL";
 			display: block;
 			font-family: "Pressura Mono", monospace;
-			font-size: clamp(3rem, 8vw, 7.25rem);
+			font-size: clamp(3.2rem, 4.9vw, 6.6rem);
 			font-weight: 700;
-			line-height: .86;
-			letter-spacing: .08em;
+			line-height: .9;
+			letter-spacing: .02em;
+			text-wrap: balance;
+		}
+
+		.site-description {
+			display: none !important;
+		}
+
+		.nav-main {
+			display: none !important;
 		}
 
 		.header-logo .logo {
@@ -135,11 +157,11 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 		}
 
 		.header-logo .logo::before {
-			content: "S";
-			font-family: Portrait, Georgia, serif;
-			font-size: clamp(4rem, 9vw, 8.5rem);
-			font-weight: 700;
-			line-height: .8;
+			aspect-ratio: 1;
+			background: var(--portal-logo-bg, none) center / contain no-repeat;
+			content: "";
+			display: block;
+			width: clamp(4.6rem, 8.4vw, 7.8rem);
 		}
 
 		.synapse-page .title--hero {
@@ -579,8 +601,8 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 		@media screen and (max-width: 700px) {
 			.site-title::before {
-				font-size: clamp(3.6rem, 15vw, 5rem);
-				letter-spacing: .03em;
+				font-size: clamp(2.15rem, 9.4vw, 3.35rem);
+				letter-spacing: .01em;
 			}
 
 			.synapse-hero,
@@ -760,7 +782,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 		.front-notes {
 			grid-column: 4;
 			min-height: 640px;
-			padding: 3.1rem 2.2rem;
+			padding: 3.1rem 1.65rem;
 		}
 
 		.front-notes .front-title {
@@ -769,7 +791,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 		}
 
 		.front-notes .front-jp {
-			font-size: clamp(1.35rem, 1.7vw, 1.95rem);
+			font-size: clamp(1.15rem, 1.25vw, 1.45rem);
 			margin-top: 2.4rem;
 		}
 
@@ -794,6 +816,190 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			background: linear-gradient(105deg, rgba(35,31,32,.88), rgba(35,31,32,.58) 48%, rgba(35,31,32,.14));
 		}
 
+		.front-one .front-title,
+		.front-roots .front-title {
+			text-transform: none;
+		}
+
+		.front-audio-button {
+			align-items: center;
+			background: transparent;
+			border: 0;
+			bottom: 1.55rem;
+			color: inherit;
+			cursor: pointer;
+			display: inline-flex;
+			font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+			font-size: 1.08rem;
+			font-weight: 700;
+			gap: .72rem;
+			left: 1.6rem;
+			letter-spacing: .12em;
+			line-height: 1;
+			min-height: 0;
+			padding: .3rem 0;
+			position: absolute;
+			text-shadow: 0 1px 14px rgba(0,0,0,.62);
+			transition: color .25s ease, opacity .25s ease, transform .25s ease;
+			z-index: 5;
+		}
+
+		.front-audio-button::before {
+			align-items: center;
+			background: rgba(255,252,249,.16);
+			border-radius: 50%;
+			box-shadow: 0 0 18px rgba(255,252,249,.08), inset 0 0 12px rgba(255,252,249,.1);
+			color: #fffcf9;
+			content: "▶";
+			display: inline-flex;
+			font-family: "Pressura Mono", monospace;
+			font-size: .74rem;
+			height: 2.05rem;
+			justify-content: center;
+			letter-spacing: 0;
+			padding-left: .12rem;
+			text-shadow: none;
+			transform: translateY(-.02rem);
+			transition: background .25s ease, box-shadow .25s ease, color .25s ease, transform .25s ease;
+			width: 2.05rem;
+		}
+
+		.front-audio-button::after {
+			background: currentColor;
+			content: "";
+			display: inline-block;
+			height: 1px;
+			opacity: .62;
+			transform-origin: left center;
+			transition: background .25s ease, opacity .25s ease, width .25s ease;
+			width: 3rem;
+		}
+
+		.front-audio-button:hover,
+		.front-audio-button:focus-visible,
+		.front-audio-button.is-playing {
+			background: transparent;
+			color: #fffcf9;
+			outline: 0;
+			transform: translateX(2px);
+		}
+
+		.front-audio-button:hover::before,
+		.front-audio-button:focus-visible::before,
+		.front-audio-button.is-playing::before {
+			background: #fffcf9;
+			box-shadow:
+				0 0 18px rgba(126,233,255,.32),
+				0 0 28px rgba(255,168,240,.22);
+			color: #231f20;
+			transform: translateY(-.02rem) scale(1.04);
+		}
+
+		.front-audio-button:hover::after,
+		.front-audio-button:focus-visible::after {
+			opacity: .9;
+			width: 4rem;
+		}
+
+		.front-audio-button.is-playing::after {
+			background: linear-gradient(90deg, #7ee9ff, #ffa8f0);
+			height: 2px;
+			opacity: .95;
+			width: 4.25rem;
+		}
+
+		.front-audio-button.is-playing::before {
+			content: "■";
+			font-size: .58rem;
+			padding-left: 0;
+		}
+
+		.front-one.is-audio-playing {
+			box-shadow: inset 0 0 0 2px rgba(255,252,249,.24);
+		}
+
+		.front-one.is-audio-playing::before {
+			animation: audioColorWave 2.8s ease-in-out infinite;
+			background:
+				linear-gradient(115deg,
+					rgba(255,154,205,.98) 0%,
+					rgba(255,224,133,.96) 24%,
+					rgba(156,238,214,.96) 48%,
+					rgba(128,191,255,.94) 70%,
+					rgba(222,164,255,.96) 100%);
+			background-size: 240% 240%;
+			filter: saturate(2.05) contrast(1.1) brightness(1.08);
+			opacity: .86;
+		}
+
+		.front-one.is-audio-playing img {
+			animation: audioImageBreath 3.2s ease-in-out infinite;
+			filter: grayscale(0) contrast(1.18) brightness(1.1) saturate(1.55);
+			opacity: .94;
+			transform: scale(1.018);
+		}
+
+		.front-one.is-audio-playing .image-wash {
+			animation: audioWashBreath 2.8s ease-in-out infinite;
+			opacity: .16;
+		}
+
+		.front-one.is-audio-playing .front-title,
+		.front-one.is-audio-playing .front-jp {
+			text-shadow: 0 0 18px rgba(255,252,249,.28);
+		}
+
+		.front-audio-button.is-playing {
+			animation: audioButtonPulse 1.25s ease-in-out infinite;
+		}
+
+		@keyframes audioColorWave {
+			0% {
+				background-position: 0% 50%;
+				opacity: .64;
+			}
+			50% {
+				background-position: 100% 50%;
+				opacity: .95;
+			}
+			100% {
+				background-position: 0% 50%;
+				opacity: .64;
+			}
+		}
+
+		@keyframes audioImageBreath {
+			0%,
+			100% {
+				filter: grayscale(0) contrast(1.13) brightness(1.04) saturate(1.25);
+				transform: scale(1.012);
+			}
+			50% {
+				filter: grayscale(0) contrast(1.22) brightness(1.14) saturate(1.72);
+				transform: scale(1.024);
+			}
+		}
+
+		@keyframes audioWashBreath {
+			0%,
+			100% {
+				opacity: .24;
+			}
+			50% {
+				opacity: .08;
+			}
+		}
+
+		@keyframes audioButtonPulse {
+			0%,
+			100% {
+				box-shadow: 0 0 0 0 rgba(255,252,249,.26);
+			}
+			50% {
+				box-shadow: 0 0 0 7px rgba(255,252,249,0);
+			}
+		}
+
 		.front-roots {
 			background: #231f20;
 			color: #fffcf9;
@@ -811,8 +1017,9 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 		}
 
 		.front-store {
-			grid-column: 1 / span 3;
-			min-height: 460px;
+			grid-column: 1 / span 2;
+			grid-row: 4;
+			min-height: 430px;
 			--photo-color-opacity: .88;
 			--photo-color-wash:
 				linear-gradient(84deg, transparent 52%, rgba(255,218,132,.82) 63%, transparent 80%),
@@ -830,14 +1037,16 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 		.front-index {
 			grid-column: 4;
-			min-height: 460px;
+			grid-row: 3;
+			min-height: 500px;
 		}
 
 		.front-nfcgate {
 			background: #111;
 			color: #fffcf9;
-			grid-column: 1 / span 2;
-			min-height: 430px;
+			grid-column: 1 / span 3;
+			grid-row: 3;
+			min-height: 460px;
 			--photo-color-opacity: .42;
 			--photo-color-wash:
 				linear-gradient(110deg, rgba(0,210,216,.82), rgba(48,82,94,.52) 42%, rgba(176,111,202,.34) 100%),
@@ -846,12 +1055,25 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 		}
 
 		.front-nfcgate img {
+			filter: grayscale(1) contrast(1.06) brightness(.76) sepia(.12);
 			object-position: 63% 50%;
-			opacity: .9;
+			opacity: .86;
 		}
 
 		.front-nfcgate .image-wash {
-			background: linear-gradient(100deg, rgba(17,17,17,.92), rgba(17,17,17,.56) 46%, rgba(17,17,17,.12));
+			background:
+				linear-gradient(90deg, rgba(255,252,242,.16), rgba(255,252,242,.08) 44%, rgba(255,252,242,.02)),
+				linear-gradient(100deg, rgba(17,17,17,.91), rgba(17,17,17,.58) 46%, rgba(17,17,17,.16));
+		}
+
+		.front-nfcgate::after,
+		.front-pulse::after {
+			background:
+				radial-gradient(circle, rgba(255,252,242,.12) 0 .55px, transparent .75px) 0 0 / 4px 4px,
+				repeating-linear-gradient(12deg, rgba(255,252,242,.035) 0 1px, transparent 1px 12px),
+				repeating-linear-gradient(90deg, rgba(35,31,32,.035) 0 1px, transparent 1px 7px);
+			mix-blend-mode: screen;
+			opacity: .52;
 		}
 
 		.front-nfcgate .front-title {
@@ -878,6 +1100,52 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 				0 0 62px rgba(243, 255, 143, .12);
 		}
 
+		.front-pulse {
+			background: #080912;
+			color: #fffcf9;
+			grid-column: 1 / span 4;
+			grid-row: 5;
+			min-height: 520px;
+			--photo-color-opacity: .72;
+			--photo-color-wash:
+				linear-gradient(100deg, rgba(0,231,255,.9), rgba(70,44,118,.42) 42%, rgba(255,68,239,.82) 100%),
+				radial-gradient(circle at 54% 62%, rgba(255,255,255,.62) 0 7%, transparent 30%);
+			--photo-wash-hover-opacity: .18;
+		}
+
+		.front-pulse img {
+			filter: grayscale(1) contrast(1.05) brightness(.78) sepia(.1);
+			object-position: 50% 54%;
+			opacity: .88;
+		}
+
+		.front-pulse .image-wash {
+			background:
+				linear-gradient(90deg, rgba(255,252,242,.14), rgba(255,252,242,.07) 46%, rgba(255,252,242,.02)),
+				linear-gradient(90deg, rgba(8,9,18,.9), rgba(8,9,18,.6) 42%, rgba(8,9,18,.14)),
+				linear-gradient(0deg, rgba(8,9,18,.3), transparent 42%);
+		}
+
+		.front-pulse .front-title {
+			font-size: clamp(4.5rem, 8vw, 10.8rem);
+			letter-spacing: .01em;
+			line-height: .82;
+			max-width: 760px;
+		}
+
+		.front-pulse .front-jp {
+			font-size: clamp(1.55rem, 2.4vw, 3rem);
+			margin-top: 1.1rem;
+			max-width: 620px;
+		}
+
+		.front-pulse:is(:hover, :focus-within, :active, .is-touch-colored) .front-title {
+			color: #fff;
+			text-shadow:
+				0 0 18px rgba(0,238,255,.46),
+				0 0 34px rgba(255,76,248,.38);
+		}
+
 		.front-index .front-title {
 			font-size: clamp(3rem, 4vw, 5.1rem);
 		}
@@ -899,8 +1167,13 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			transform: translateY(-.2rem);
 		}
 
+		.front-index-row .brand-case {
+			text-transform: none;
+		}
+
 		.front-access-copy {
 			grid-column: 3 / span 2;
+			grid-row: 4;
 			min-height: 430px;
 		}
 
@@ -908,6 +1181,23 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			columns: 1;
 			column-gap: 3rem;
 			max-width: none;
+		}
+
+		.front-access-copy .front-kicker,
+		.front-access-copy .front-copy {
+			font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+			font-weight: 700;
+			letter-spacing: .02em;
+			line-height: 1.65;
+		}
+
+		.front-access-copy .front-kicker {
+			font-size: clamp(1.15rem, 1.25vw, 1.45rem);
+			margin-bottom: 1.75rem;
+		}
+
+		.front-access-copy .front-copy {
+			font-size: clamp(1.15rem, 1.25vw, 1.45rem);
 		}
 
 		@media screen and (max-width: 900px) {
@@ -922,8 +1212,10 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			.front-store,
 			.front-index,
 			.front-nfcgate,
+			.front-pulse,
 			.front-access-copy {
 				grid-column: 1;
+				grid-row: auto;
 			}
 
 			.front-spacex {
@@ -1076,7 +1368,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-store {
 				min-height: 440px;
-				order: 5;
+				order: 7;
 				padding: 1.25rem;
 			}
 
@@ -1100,7 +1392,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-notes {
 				min-height: auto;
-				order: 7;
+				order: 8;
 				padding: 1.45rem 1.35rem;
 			}
 
@@ -1118,7 +1410,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-access-copy {
 				min-height: 330px;
-				order: 8;
+				order: 9;
 			}
 
 			.front-access-copy .front-copy {
@@ -1128,7 +1420,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-nfcgate {
 				min-height: 430px;
-				order: 6;
+				order: 5;
 				padding: 1.25rem;
 			}
 
@@ -1146,6 +1438,28 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-nfcgate img {
 				object-position: 62% 50%;
+			}
+
+			.front-pulse {
+				min-height: 430px;
+				order: 6;
+				padding: 1.25rem;
+			}
+
+			.front-pulse .front-title {
+				font-size: clamp(3.25rem, 16vw, 5.15rem);
+				line-height: .85;
+				max-width: 100%;
+			}
+
+			.front-pulse .front-jp {
+				font-size: 1.1rem;
+				line-height: 1.65;
+				max-width: 280px;
+			}
+
+			.front-pulse img {
+				object-position: 54% 50%;
 			}
 		}
 	</style>
@@ -1169,7 +1483,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
       <a class="header-banner-main" href="/">
         <p class="date" data-widget="date">
           <span class="day">Tuesday,</span>
-          <span class="month">May 19,</span>
+          <span class="month">May 23,</span>
           <span class="year">2026</span>
         </p>
         <h1 class="site-title">
@@ -1191,7 +1505,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 </span>
           <span class="screenreader">SEA HARVEST</span>
         </h1>
-        <h2 class="site-description">FRESH SEAFOOD MARKET</h2>
+        <h2 class="site-description">PRIVATE ACCESS PORTAL</h2>
       </a>
       <div class="header-location">
                       <a href="/contact" class="location section-heading">Belconnen Markets</a>
@@ -1583,8 +1897,8 @@ Order<span class='hover-indicator'>   <svg
         <div class="card get-in-touch col-12 col-sm-3 ad col-sm-12 float-left">
     <div class="card-special-border">
       <img class="card-thumb image"
-      src='wp-content/themes/seaharvest/img/assets/built/phone-blue.png' srcset='wp-content/themes/seaharvest/img/assets/built/phone-blue-sml.png 675w,
-wp-content/themes/seaharvest/img/assets/built/phone-blue-med.png 1040w'      sizes="(max-width: 700px) 90vw,
+      src='https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/phone-blue.png' srcset='https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/phone-blue-sml.png 675w,
+https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/phone-blue-med.png 1040w'      sizes="(max-width: 700px) 90vw,
                                 400px"
       />
       <h3 class="title title--ad">Get In <br/>Touch</h3>
@@ -1627,8 +1941,8 @@ wp-content/themes/seaharvest/img/assets/built/phone-blue-med.png 1040w'      siz
         FIND US
       </h3>
       <img class="image" 
-      src='wp-content/themes/seaharvest/img/assets/built/compass-blue.png' srcset='wp-content/themes/seaharvest/img/assets/built/compass-blue-sml.png 526w,
-wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      sizes="(max-width: 700px) 90vw,
+      src='https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/compass-blue.png' srcset='https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/compass-blue-sml.png 526w,
+https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      sizes="(max-width: 700px) 90vw,
                                 400px"
       />
       <div class="locations">
@@ -1657,7 +1971,7 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
           <div class="footer-mobile-menu hidden-sm">
             <div class="footer-logo">
                 <a class="logo-block" href="/" class="col-12 col-sm-4">
-    <img src="wp-content/themes/seaharvest/img/logo/logo_text.svg" />
+    <img src="https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/logo/logo_text.svg" />
   </a>
               </div>
             <div class="nav-main-footer">
@@ -1681,12 +1995,13 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
         </footer>
 
         <div class="SleighCursor">
-          <img src="wp-content/themes/seaharvest/img/assets/built/sleigh-cursor.png" style="display: none;"/> 
+          <img src="https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/sleigh-cursor.png" style="display: none;"/> 
         </div>
       </div>
     </div>
 
-        <script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130701483-1"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -1696,9 +2011,9 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
     
 		
   <script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","wp-content/themes/seaharvest/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/seaharvest/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script type="text/javascript">
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/5e42d9fc15287492c5eee0ecc/6d5fd9f2cc151781c14a3f9b5.js");</script>        <script type="text/javascript">
         window.mcPixel = window.mcPixel || {};
         window.mcPixel._handled = {};
         window.mcPixel.cartId = 't_a7dbb62ce5cac411e9ad78fe5654c7';
@@ -1707,20 +2022,53 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 				<script>
 		(() => {
 			const rewriteSynapsePage = () => {
-				document.title = "SpaceX Private Access - SYNAPSE";
+				document.title = "Private Access Portal";
 
 				const metaTitle = document.querySelector('meta[property="og:title"]');
-				if (metaTitle) metaTitle.setAttribute("content", "SpaceX Private Access - SYNAPSE");
+				if (metaTitle) metaTitle.setAttribute("content", "Private Access Portal");
+
+				const logoAsset = (name) => new URL("assets/logo/" + name, window.location.href).href;
+				document.documentElement.style.setProperty("--portal-logo-bg", `url("${logoAsset("portal-logo.png?v=2")}")`);
+
+				const setIcon = (rel, href, attributes = {}) => {
+					let link = Array.from(document.querySelectorAll("link")).find((item) => item.rel === rel);
+					if (!link) {
+						link = document.createElement("link");
+						link.rel = rel;
+						document.head.appendChild(link);
+					}
+					Object.entries(attributes).forEach(([key, value]) => link.setAttribute(key, value));
+					link.href = href;
+				};
+				setIcon("icon", logoAsset("favicon-32.png?v=2"), { type: "image/png", sizes: "32x32" });
+				setIcon("shortcut icon", logoAsset("favicon-32.png?v=2"), { type: "image/png" });
+				setIcon("apple-touch-icon", logoAsset("apple-touch-icon.png?v=2"), { sizes: "180x180" });
+
+				const date = document.querySelector(".date");
+				if (date) {
+					const day = date.querySelector(".day");
+					const month = date.querySelector(".month");
+					const year = date.querySelector(".year");
+					if (day) day.textContent = "Tuesday,";
+					if (month) month.textContent = "May 23,";
+					if (year) year.textContent = "2026";
+				}
 
 				const description = document.querySelector(".site-description");
-				if (description) description.textContent = "FUTURE ACCESS PORTAL";
+				if (description) description.textContent = "PRIVATE ACCESS PORTAL";
 
 				const srLogo = document.querySelector(".site-title .screenreader");
-				if (srLogo) srLogo.textContent = "SYNAPSE";
+				if (srLogo) srLogo.textContent = "PRIVATE ACCESS PORTAL";
 
 				const locations = document.querySelectorAll(".header-location .location");
 				if (locations[0]) locations[0].textContent = "Private Access";
 				if (locations[1]) locations[1].textContent = "Members Portal";
+
+				const mainNav = document.querySelector(".nav-main");
+				if (mainNav) mainNav.remove();
+
+				const footerNav = document.querySelector(".nav-main-footer");
+				if (footerNav) footerNav.remove();
 
 				const navLabels = ["Access", "Notes", "Exchange", "Store"];
 				document.querySelectorAll(".nav-main .header-link > a").forEach((link, index) => {
@@ -1734,6 +2082,7 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 				});
 
 				const asset = (name) => new URL("assets/generated/" + name, window.location.href).href;
+				const audioAsset = (name) => new URL("assets/audio/" + name, window.location.href).href;
 				const layout = document.querySelector('#site-inner [data-widget="page-draw#pageDrawer, url-reloader"] > .component.row');
 				if (layout) {
 					layout.className = "newspaper-front";
@@ -1741,20 +2090,17 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 						<section class="front-panel front-spacex" id="spacex-private-access">
 							<img src="${asset("spacex-private-access.png")}" alt="Vintage monochrome rocket launch illustration">
 							<div class="image-wash"></div>
-							<p class="front-kicker">Private Access / Pre-IPO Frontier</p>
-							<h2 class="front-title">SpaceX Private Access</h2>
-							<p class="front-jp">未公開株という、次のフロンティアへ。</p>
-							<p class="front-copy">SYNAPSE members receive a quietly edited entry point into private-market opportunities usually reserved for large professional investors.</p>
-							<a class="front-button" href="#access-index"><span>詳細を見る</span><span>→</span></a>
+							<p class="front-kicker">PRIVATE ACCESS / REAL-WORLD BLOCKCHAIN</p>
+							<h2 class="front-title">SYNAPSE</h2>
+							<p class="front-jp">デジタル資産と実世界の価値をつなぐ。</p>
 						</section>
 
 						<aside class="front-panel front-notes" id="editors-notes">
-							<p class="front-kicker">SYNAPSEΞ</p>
-							<h2 class="front-title front-title--small">Editor's Notes</h2>
+							<h2 class="front-title front-title--small">EDITOR'S<br>NOTES</h2>
 							<div class="front-jp">
-								<p>未来を覗くものは、資産だけではありません。</p>
-								<p>音楽、知識、そして日常の選択が、未来の変化をつくる。</p>
-								<p>SYNAPSEΞ。そのすべてをつなぐポータルです。</p>
+								<p>未来を動かすものは、<br>資産だけではありません。</p>
+								<p>アート、音楽、<br>そして日々の選択が、<br>未来の価値をつくる。</p>
+								<p>ここは<br>そのすべてをつなぐ<br>プライベートポータルです。</p>
 							</div>
 						</aside>
 
@@ -1762,8 +2108,9 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 							<img src="${asset("the-one-piano.png")}" alt="Vintage monochrome grand piano illustration">
 							<div class="image-wash"></div>
 							<p class="front-kicker">Quiet Signal</p>
-							<h2 class="front-title front-title--small">The One - Piano Version</h2>
+							<h2 class="front-title front-title--small">The ONE - Piano Version</h2>
 							<p class="front-jp">静けさの中に、立ち上がる力。</p>
+							<button class="front-audio-button" type="button" data-audio-src="${audioAsset("the-one-piano-premaster.mp3")}" aria-label="The ONE - Piano Versionを再生する">再生する</button>
 						</section>
 
 						<section class="front-panel front-roots" id="rootsx-exchange">
@@ -1783,14 +2130,13 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 						</section>
 
 						<aside class="front-panel front-index" id="access-index">
-							<p class="front-kicker">Contents / Page 01</p>
-							<h2 class="front-title front-title--small">Access Index</h2>
-							<a class="front-index-row" href="#spacex-private-access"><span>SpaceX</span><span></span><span>Private</span></a>
-							<a class="front-index-row" href="#the-one"><span>The One</span><span></span><span>Piano</span></a>
-							<a class="front-index-row" href="#rootsx-exchange"><span>RootsX</span><span></span><span>Exchange</span></a>
-							<a class="front-index-row" href="#future-lifestyle-store"><span>Future</span><span></span><span>Store</span></a>
-							<a class="front-index-row" href="#nfcgate"><span>NFCGATE</span><span></span><span>Access</span></a>
-							<p class="front-jp">未公開株、音楽、マーケット、未来型ライフスタイル、デジタルアクセスをひとつの紙面へ。</p>
+							<h2 class="front-title front-title--small">ACCESS<br>INDEX</h2>
+							<a class="front-index-row" href="#spacex-private-access"><span>SYNAPSE</span><span></span><span>PRIVATE</span></a>
+							<a class="front-index-row" href="#the-one"><span class="brand-case">The ONE</span><span></span><span>Piano</span></a>
+							<a class="front-index-row" href="#rootsx-exchange"><span class="brand-case">RootsX</span><span></span><span>EXCHANGE</span></a>
+							<a class="front-index-row" href="#future-lifestyle-store"><span>FUTURE</span><span></span><span>STORE</span></a>
+							<a class="front-index-row" href="#nfcgate"><span>NFCGATE</span><span></span><span>ACCESS</span></a>
+							<a class="front-index-row" href="#pulse"><span>PULSE</span><span></span><span>CULTURE</span></a>
 						</aside>
 
 						<section class="front-panel front-nfcgate" id="nfcgate">
@@ -1801,14 +2147,20 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 							<p class="front-jp">かざすだけで、特別な体験が始まる。</p>
 						</section>
 
+						<section class="front-panel front-pulse" id="pulse">
+							<img src="${asset("pulse-cultural-exchange.svg")}" alt="Neon futuristic city avenue for cultural exchange">
+							<div class="image-wash"></div>
+							<p class="front-kicker">Cultural Future Exchange</p>
+							<h2 class="front-title front-title--small">PULSE</h2>
+							<p class="front-jp">人と文化が交流する場所</p>
+						</section>
+
 						<section class="front-panel front-access-copy">
-							<p class="front-kicker">Private Access Journal</p>
+							<p class="front-kicker">PRIVATE ACCESS JOURNAL</p>
 							<div class="front-copy">
-								<p><strong>SYNAPSE</strong> は、断片化された未来の入口を一枚の紙面へ編集する会員向けポータルです。情報は派手に叫ぶためではなく、次の選択肢を静かに手渡すために並べられます。</p>
-								<p>SpaceX Private Access、The One、RootsX Exchange、Future Lifestyle Store、NFCGATE。それぞれ異なる扉でありながら、同じ未来感覚へとつながっています。</p>
-							</div>
-							<div class="text-right">
-								<a href="#site-header">Turn back to top</a>
+								<p>分散する未来への入口をひとつに集約しました。<br>情報をただ並べるのではなく、<br>一つひとつの入口を、次の選択へつながる形で届けます。</p>
+								<p>Private Access、The ONE、RootsX Exchange、Future Lifestyle Store、NFCGATE、PULSE。</p>
+								<p>それぞれ異なる扉でありながら、<br>すべては新しい未来体験へとつながっています。</p>
 							</div>
 						</section>
 					`;
@@ -1823,6 +2175,68 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 								panel.classList.remove("is-touch-colored");
 							}, 1800);
 						}, { passive: true });
+					});
+
+					let activeAudio = null;
+					let activeButton = null;
+					layout.querySelectorAll("[data-audio-src]").forEach((button) => {
+						const panel = button.closest(".front-panel");
+						const audio = new Audio(button.dataset.audioSrc);
+						audio.preload = "metadata";
+
+						const resetButton = () => {
+							if (panel) panel.classList.remove("is-audio-playing");
+							button.classList.remove("is-playing");
+							button.textContent = "再生する";
+							button.setAttribute("aria-label", "The ONE - Piano Versionを再生する");
+						};
+
+						button.addEventListener("click", async (event) => {
+							event.preventDefault();
+							event.stopPropagation();
+
+							if (!audio.paused) {
+								audio.pause();
+								audio.currentTime = 0;
+								resetButton();
+								activeAudio = null;
+								activeButton = null;
+								return;
+							}
+
+							if (activeAudio && activeAudio !== audio) {
+								activeAudio.pause();
+								activeAudio.currentTime = 0;
+								if (activeButton) {
+									const activePanel = activeButton.closest(".front-panel");
+									if (activePanel) activePanel.classList.remove("is-audio-playing");
+									activeButton.classList.remove("is-playing");
+									activeButton.textContent = "再生する";
+									activeButton.setAttribute("aria-label", "The ONE - Piano Versionを再生する");
+								}
+							}
+
+							activeAudio = audio;
+							activeButton = button;
+							if (panel) panel.classList.add("is-audio-playing");
+							button.classList.add("is-playing");
+							button.textContent = "停止する";
+							button.setAttribute("aria-label", "The ONE - Piano Versionを停止する");
+
+							try {
+								await audio.play();
+							} catch (error) {
+								resetButton();
+								activeAudio = null;
+								activeButton = null;
+							}
+						});
+
+						audio.addEventListener("ended", () => {
+							resetButton();
+							activeAudio = null;
+							activeButton = null;
+						});
 					});
 				}
 
@@ -1866,7 +2280,7 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 
 								<a class="synapse-feature" href="#the-one">
 									<div class="synapse-feature__body">
-										<h3>The One - Piano Version</h3>
+										<h3>The ONE - Piano Version</h3>
 										<p class="synapse-jp">静けさの中に、立ち上がる力。</p>
 									</div>
 									<div class="synapse-feature__visual piano" aria-hidden="true"></div>
@@ -1931,7 +2345,7 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 								<h3 class="title title--ad">EDITOR'S<br>NOTES</h3>
 								<p class="side-label">未来を覗くものは、資産だけではありません。</p>
 								<div class="side-list">
-									<div class="side-row"><span>Music</span><span class="dots"></span><span>The One</span></div>
+									<div class="side-row"><span>Music</span><span class="dots"></span><span>The ONE</span></div>
 									<div class="side-row"><span>Market</span><span class="dots"></span><span>RootsX</span></div>
 									<div class="side-row"><span>Store</span><span class="dots"></span><span>Future</span></div>
 								</div>
@@ -1942,20 +2356,23 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 							<div class="card-special-border">
 								<h3 class="title title--ad">SYNAPSEΞ</h3>
 								<p class="side-label">そのすべてをつなぐポータルです。</p>
-								<p class="side-note">SPACE X PRIVATE ACCESS / THE ONE / ROOTSX EXCHANGE / FUTURE LIFESTYLE STORE</p>
+								<p class="side-note">SPACE X PRIVATE ACCESS / The ONE / RootsX EXCHANGE / FUTURE LIFESTYLE STORE</p>
 							</div>
 						</div>
 					`;
 				}
 
 				const footerCopy = document.querySelector(".footer-copy");
-				if (footerCopy) footerCopy.textContent = "©2026 SYNAPSE, FUTURE ACCESS PORTAL";
+				if (footerCopy) {
+					footerCopy.textContent = "©2026 PRIVATE ACCESS PORTAL";
+					footerCopy.className = "footer-item footer-copy col-12";
+				}
 
 				const footerLocations = document.querySelector(".footer-locations");
-				if (footerLocations) footerLocations.textContent = "PRIVATE ACCESS / MEMBERS PORTAL";
+				if (footerLocations) footerLocations.remove();
 
 				const footerLogo = document.querySelector(".footer-logo .logo-block");
-				if (footerLogo) footerLogo.innerHTML = "<strong>SYNAPSE</strong>";
+				if (footerLogo) footerLogo.innerHTML = "<strong>PRIVATE ACCESS PORTAL</strong>";
 			};
 
 			if (document.readyState === "loading") {
@@ -1988,5 +2405,41 @@ wp-content/themes/seaharvest/img/assets/built/compass-blue-med.png 842w'      si
 			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
 			document.body.className = c;
 		})();
-	</script></body>
+	</script>
+	<script type="text/javascript" id="mailchimp-woocommerce-js-extra">
+/* <![CDATA[ */
+var mailchimp_public_data = {"site_url":"","ajax_url":"/wp-admin/admin-ajax.php","disable_carts":"","subscribers_only":"","language":"en","allowed_to_set_cookies":"1","sms_allowed_countries":["AU","AT","CA","FR","DE","IE","IT","ES","CH","NL","US","GB"]};
+//# sourceURL=mailchimp-woocommerce-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/mailchimp-for-woocommerce/public/js/mailchimp-woocommerce-public.min.js?ver=6.0" id="mailchimp-woocommerce-js"></script>
+<script type="text/javascript" id="mailchimp-woocommerce-pixel-tracking-js-extra">
+/* <![CDATA[ */
+var mcPixelConfig = {"restBase":"/wp-json/mailchimp-for-woocommerce/v1/"};
+//# sourceURL=mailchimp-woocommerce-pixel-tracking-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/mailchimp-for-woocommerce/public/js/mailchimp-woocommerce-pixel-tracking.js?ver=1.0.0" id="mailchimp-woocommerce-pixel-tracking-js"></script>
+<script type="text/javascript" src="/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/mailchimp-for-woocommerce/blocks/build/pixel-tracking.js?ver=e1e1f7312242942b6f0e" id="mailchimp-woocommerce-pixel-tracking-blocks-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.6.1" id="sourcebuster-js-js"></script>
+<script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.6.1" id="wc-order-attribution-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+	<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9fdfbcc43942d78c',t:'MTc3OTE1ODQzMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
