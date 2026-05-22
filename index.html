@@ -635,13 +635,22 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			width: 100%;
 		}
 
-		.front-panel {
-			border: 1px solid #231f20;
-			min-height: 280px;
-			overflow: hidden;
-			padding: clamp(1.6rem, 2.6vw, 3rem);
-			position: relative;
-		}
+			.front-panel {
+				border: 1px solid #231f20;
+				min-height: 280px;
+				overflow: hidden;
+				padding: clamp(1.6rem, 2.6vw, 3rem);
+				position: relative;
+			}
+
+			.front-panel[data-link-url] {
+				cursor: pointer;
+			}
+
+			.front-panel[data-link-url]:focus-visible {
+				outline: 2px solid #231f20;
+				outline-offset: -7px;
+			}
 
 		.front-panel::before,
 		.front-panel::after {
@@ -814,27 +823,51 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			margin-top: 2.4rem;
 		}
 
-		.front-one {
-			background: #231f20;
-			color: #fffcf9;
-			grid-column: 1 / span 2;
-			grid-row: 3;
-			min-height: 460px;
-			--photo-color-opacity: .86;
-			--photo-color-wash:
-				linear-gradient(76deg, transparent 56%, rgba(255,213,142,.84) 67%, transparent 86%),
-				linear-gradient(112deg, rgba(95,43,24,.98), rgba(212,136,54,.9) 47%, rgba(35,84,136,.86));
-			--photo-wash-hover-opacity: .26;
-		}
+			.front-one {
+				background: #231f20;
+				color: #fffcf9;
+				grid-column: 1 / span 2;
+				grid-row: 3;
+				min-height: 460px;
+				--photo-color-opacity: .78;
+				--photo-color-wash:
+					linear-gradient(76deg, rgba(132,68,255,.9) 8%, rgba(0,229,255,.84) 35%, transparent 55%),
+					linear-gradient(112deg, rgba(255,72,44,.75), rgba(61,244,223,.72) 46%, rgba(116,68,255,.82));
+				--photo-wash-hover-opacity: .18;
+			}
 
 		.front-one img,
 		.front-roots img {
 			opacity: .82;
 		}
 
-		.front-one .image-wash {
-			background: linear-gradient(105deg, rgba(35,31,32,.88), rgba(35,31,32,.58) 48%, rgba(35,31,32,.14));
-		}
+			.front-one .image-wash {
+				background: linear-gradient(105deg, rgba(35,31,32,.9), rgba(35,31,32,.64) 42%, rgba(35,31,32,.1));
+			}
+
+			.front-one--artwork .image-wash {
+				background: linear-gradient(105deg, rgba(35,31,32,.08), rgba(35,31,32,.06) 48%, rgba(35,31,32,.02));
+			}
+
+				.front-one--artwork img {
+					background: #0c0b0b;
+					object-fit: contain;
+					object-position: top center;
+				}
+
+			.front-one--artwork .front-kicker,
+			.front-one--artwork .front-title,
+			.front-one--artwork .front-jp {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				white-space: nowrap;
+				width: 1px;
+			}
 
 		.front-one .front-artist-logo {
 			bottom: 1.55rem;
@@ -1280,15 +1313,22 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			font-size: clamp(3rem, 4vw, 5.1rem);
 		}
 
-		.front-index-row {
-			align-items: baseline;
-			display: flex;
-			font-family: "Pressura Mono", monospace;
-			font-size: 1.15rem;
-			font-weight: 700;
-			margin: 1.05rem 0;
-			text-transform: uppercase;
-		}
+			.front-index-row {
+				align-items: baseline;
+				background: none;
+				border: 0;
+				color: inherit;
+				cursor: pointer;
+				display: flex;
+				font-family: "Pressura Mono", monospace;
+				font-size: 1.15rem;
+				font-weight: 700;
+				margin: 1.05rem 0;
+				padding: 0;
+				text-align: left;
+				text-transform: uppercase;
+				width: 100%;
+			}
 
 		.front-index-row span:nth-child(2) {
 			border-bottom: 2px dotted currentColor;
@@ -1297,15 +1337,15 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			transform: translateY(-.2rem);
 		}
 
-		.front-index-row .brand-case {
-			text-transform: none;
-		}
+			.front-index-row .brand-case {
+				text-transform: none;
+			}
 
-		.front-access-copy {
-			grid-column: 1 / span 4;
-			grid-row: 5;
-			min-height: 430px;
-		}
+				.front-access-copy {
+					grid-column: 1 / span 4;
+					grid-row: 5;
+					min-height: 430px;
+				}
 
 		.front-access-copy .front-copy {
 			columns: 1;
@@ -1456,7 +1496,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-one {
 				min-height: 430px;
-				order: 6;
+				order: 5;
 				padding: 1.25rem;
 			}
 
@@ -1477,12 +1517,20 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 				width: clamp(7.75rem, 34vw, 10.9rem);
 			}
 
-			.front-one img {
-				object-position: 72% 50%;
-			}
+				.front-one img {
+					object-position: 72% 50%;
+				}
 
-			.front-roots {
-				min-height: 560px;
+				.front-one--artwork {
+					min-height: 320px;
+				}
+
+				.front-one--artwork img {
+					object-position: top center;
+				}
+
+				.front-roots {
+					min-height: 560px;
 				order: 4;
 				padding: 1.25rem;
 			}
@@ -1545,7 +1593,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-store {
 				min-height: 440px;
-				order: 5;
+				order: 7;
 				padding: 1.25rem;
 			}
 
@@ -1597,7 +1645,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-nfcgate {
 				min-height: 430px;
-				order: 7;
+				order: 6;
 				padding: 1.25rem;
 			}
 
@@ -2245,11 +2293,25 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 
 				const asset = (name) => new URL("assets/generated/" + name, window.location.href).href;
 				const audioAsset = (name) => new URL("assets/audio/" + name, window.location.href).href;
+					const panelLinks = {
+						// 外部リンク先が決まったら、各項目に https:// から始まるURLを入れてください。
+						spacex: "",
+						viaiphone: "",
+						rootsx: "",
+						badcat: "",
+						nfcgate: "",
+						future: "",
+					};
+				const escapeAttr = (value) => String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+				const panelAttrs = (key, label) => {
+					const url = panelLinks[key];
+					return url ? ` data-link-url="${escapeAttr(url)}" role="link" tabindex="0" aria-label="${escapeAttr(label)}"` : "";
+				};
 				const layout = document.querySelector('#site-inner [data-widget="page-draw#pageDrawer, url-reloader"] > .component.row');
 				if (layout) {
 					layout.className = "newspaper-front";
 					layout.innerHTML = `
-						<section class="front-panel front-spacex" id="spacex-private-access">
+						<section class="front-panel front-spacex" id="spacex-private-access"${panelAttrs("spacex", "SpaceXの外部サイトを開く")}>
 							<img src="${asset("spacex-private-access.png")}" alt="Vintage monochrome rocket launch illustration">
 							<div class="image-wash"></div>
 							<p class="front-kicker">PRIVATE ACCESS / SPACE FRONTIER</p>
@@ -2267,17 +2329,16 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							</div>
 						</aside>
 
-						<section class="front-panel front-one" id="the-one">
-							<img src="${asset("the-one-piano.png")}" alt="Vintage monochrome grand piano illustration">
+						<section class="front-panel front-one front-one--artwork" id="badcat"${panelAttrs("badcat", "BADCATの外部サイトを開く")}>
+							<img src="${asset("badcat-singularity-cat.png")}" alt="BADCAT Singularity Cat neon artwork">
 							<div class="image-wash"></div>
-							<p class="front-kicker">Quiet Signal</p>
-							<h2 class="front-title front-title--small">The ONE - Piano Version</h2>
-							<p class="front-jp">静けさの中に、立ち上がる力。</p>
-							<img class="front-artist-logo" src="${asset("jyuno-artist-logo.png")}" alt="JYuno artist logo">
-							<button class="front-audio-button" type="button" data-audio-src="${audioAsset("the-one-piano-premaster.mp3")}" aria-label="The ONE - Piano Versionを再生する">再生する</button>
+							<p class="front-kicker">PLAYFUL SOUND / Singularity Cat</p>
+							<h2 class="front-title front-title--small">BADCAT</h2>
+							<p class="front-jp">可愛いだけじゃ、終わらない音。</p>
+							<button class="front-audio-button" type="button" data-audio-src="${audioAsset("the-one-piano-premaster.mp3")}" aria-label="BADCATを再生する">再生する</button>
 						</section>
 
-						<section class="front-panel front-roots" id="rootsx-exchange">
+						<section class="front-panel front-roots" id="rootsx-exchange"${panelAttrs("rootsx", "RootsX Exchangeの外部サイトを開く")}>
 							<img src="${asset("rootsx-exchange.png")}" alt="Vintage monochrome financial chart and exchange illustration">
 							<div class="image-wash"></div>
 							<p class="front-kicker">Market / Exchange / Route</p>
@@ -2288,7 +2349,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<p class="front-support">PCでマーケットを広く確認。<br>Androidアプリで日常の中からすぐにアクセス。<br>AI搭載スマートフォンVIAIPHONEにも対応し、<br>取引体験をより身近にします。</p>
 						</section>
 
-						<section class="front-panel front-viaiphone" id="viaiphone">
+						<section class="front-panel front-viaiphone" id="viaiphone"${panelAttrs("viaiphone", "VIAIPHONEの外部サイトを開く")}>
 							<img src="${asset("viaiphone-mono.png")}" alt="Monochrome VIAIPHONE AI smartphone product image">
 							<img class="viaiphone-color" src="${asset("viaiphone-color.png")}" alt="" aria-hidden="true">
 							<div class="image-wash"></div>
@@ -2297,7 +2358,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<p class="front-jp">手のひらに、次の知性を。</p>
 						</section>
 
-						<section class="front-panel front-store" id="future-lifestyle-store">
+						<section class="front-panel front-store" id="future-lifestyle-store"${panelAttrs("future", "Future Lifestyle Storeの外部サイトを開く")}>
 							<img src="${asset("future-lifestyle-store-apparel.png")}" alt="Minimal apparel objects for a future lifestyle store">
 							<div class="image-wash"></div>
 							<p class="front-kicker">Objects For Tomorrow</p>
@@ -2307,15 +2368,15 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 
 						<aside class="front-panel front-index" id="access-index">
 							<h2 class="front-title front-title--small">ACCESS<br>INDEX</h2>
-							<a class="front-index-row" href="#spacex-private-access"><span>SYNAPSE</span><span></span><span>PRIVATE</span></a>
-							<a class="front-index-row" href="#the-one"><span class="brand-case">The ONE</span><span></span><span>Piano</span></a>
-							<a class="front-index-row" href="#rootsx-exchange"><span class="brand-case">RootsX</span><span></span><span>EXCHANGE</span></a>
-							<a class="front-index-row" href="#viaiphone"><span>VIAIPHONE</span><span></span><span>AI PHONE</span></a>
-							<a class="front-index-row" href="#future-lifestyle-store"><span>FUTURE</span><span></span><span>STORE</span></a>
-							<a class="front-index-row" href="#nfcgate"><span>NFCGATE</span><span></span><span>ACCESS</span></a>
+							<button class="front-index-row" type="button" data-scroll-target="spacex-private-access"><span>SYNAPSE</span><span></span><span>PRIVATE</span></button>
+							<button class="front-index-row" type="button" data-scroll-target="badcat"><span>BADCAT</span><span></span><span>SOUND</span></button>
+							<button class="front-index-row" type="button" data-scroll-target="rootsx-exchange"><span class="brand-case">RootsX</span><span></span><span>EXCHANGE</span></button>
+							<button class="front-index-row" type="button" data-scroll-target="viaiphone"><span>VIAIPHONE</span><span></span><span>AI PHONE</span></button>
+							<button class="front-index-row" type="button" data-scroll-target="future-lifestyle-store"><span>FUTURE</span><span></span><span>STORE</span></button>
+							<button class="front-index-row" type="button" data-scroll-target="nfcgate"><span>NFCGATE</span><span></span><span>ACCESS</span></button>
 						</aside>
 
-						<section class="front-panel front-nfcgate" id="nfcgate">
+						<section class="front-panel front-nfcgate" id="nfcgate"${panelAttrs("nfcgate", "NFC GATEの外部サイトを開く")}>
 							<img src="${asset("nfcgate-access.png")}" alt="Cinematic NFC access gate terminal with glowing scan rings">
 							<div class="image-wash"></div>
 							<p class="front-kicker">Digital Access / NFC Experience</p>
@@ -2328,7 +2389,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<p class="front-kicker">PRIVATE ACCESS JOURNAL</p>
 							<div class="front-copy">
 								<p>分散する未来への入口をひとつに集約しました。<br>情報をただ並べるのではなく、<br>一つひとつの入口を、次の選択へつながる形で届けます。</p>
-								<p>Private Access、The ONE、RootsX Exchange、VIAIPHONE、Future Lifestyle Store、NFCGATE。</p>
+								<p>Private Access、BADCAT、RootsX Exchange、VIAIPHONE、Future Lifestyle Store、NFCGATE。</p>
 								<p>それぞれ異なる扉でありながら、<br>すべては新しい未来体験へとつながっています。</p>
 							</div>
 						</section>
@@ -2346,6 +2407,36 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 						}, { passive: true });
 					});
 
+					const openPanelLink = (panel) => {
+						const url = panel.dataset.linkUrl;
+						if (!url) return;
+						window.open(url, "_blank", "noopener");
+					};
+
+					layout.addEventListener("click", (event) => {
+						const panel = event.target.closest("[data-link-url]");
+						if (!panel || !layout.contains(panel)) return;
+						if (event.target.closest("button, a, input, textarea, select")) return;
+						openPanelLink(panel);
+					});
+
+					layout.addEventListener("keydown", (event) => {
+						if (event.key !== "Enter" && event.key !== " ") return;
+						const panel = event.target.closest("[data-link-url]");
+						if (!panel || !layout.contains(panel)) return;
+						event.preventDefault();
+						openPanelLink(panel);
+					});
+
+					layout.querySelectorAll("[data-scroll-target]").forEach((button) => {
+						button.addEventListener("click", () => {
+							document.getElementById(button.dataset.scrollTarget)?.scrollIntoView({
+								behavior: "smooth",
+								block: "nearest",
+							});
+						});
+					});
+
 					let activeAudio = null;
 					let activeButton = null;
 					layout.querySelectorAll("[data-audio-src]").forEach((button) => {
@@ -2353,12 +2444,12 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 						const audio = new Audio(button.dataset.audioSrc);
 						audio.preload = "metadata";
 
-						const resetButton = () => {
-							if (panel) panel.classList.remove("is-audio-playing");
-							button.classList.remove("is-playing");
-							button.textContent = "再生する";
-							button.setAttribute("aria-label", "The ONE - Piano Versionを再生する");
-						};
+							const resetButton = () => {
+								if (panel) panel.classList.remove("is-audio-playing");
+								button.classList.remove("is-playing");
+								button.textContent = "再生する";
+								button.setAttribute("aria-label", "BADCATを再生する");
+							};
 
 						button.addEventListener("click", async (event) => {
 							event.preventDefault();
@@ -2376,21 +2467,21 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							if (activeAudio && activeAudio !== audio) {
 								activeAudio.pause();
 								activeAudio.currentTime = 0;
-								if (activeButton) {
-									const activePanel = activeButton.closest(".front-panel");
-									if (activePanel) activePanel.classList.remove("is-audio-playing");
-									activeButton.classList.remove("is-playing");
-									activeButton.textContent = "再生する";
-									activeButton.setAttribute("aria-label", "The ONE - Piano Versionを再生する");
+									if (activeButton) {
+										const activePanel = activeButton.closest(".front-panel");
+										if (activePanel) activePanel.classList.remove("is-audio-playing");
+										activeButton.classList.remove("is-playing");
+										activeButton.textContent = "再生する";
+										activeButton.setAttribute("aria-label", "BADCATを再生する");
+									}
 								}
-							}
 
 							activeAudio = audio;
 							activeButton = button;
-							if (panel) panel.classList.add("is-audio-playing");
-							button.classList.add("is-playing");
-							button.textContent = "停止する";
-							button.setAttribute("aria-label", "The ONE - Piano Versionを停止する");
+								if (panel) panel.classList.add("is-audio-playing");
+								button.classList.add("is-playing");
+								button.textContent = "停止する";
+								button.setAttribute("aria-label", "BADCATを停止する");
 
 							try {
 								await audio.play();
@@ -2447,13 +2538,13 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 									</div>
 								</a>
 
-								<a class="synapse-feature" href="#the-one">
-									<div class="synapse-feature__body">
-										<h3>The ONE - Piano Version</h3>
-										<p class="synapse-jp">静けさの中に、立ち上がる力。</p>
-									</div>
-									<div class="synapse-feature__visual piano" aria-hidden="true"></div>
-								</a>
+									<a class="synapse-feature" href="#badcat">
+										<div class="synapse-feature__body">
+											<h3>BADCAT</h3>
+											<p class="synapse-jp">可愛いだけじゃ、終わらない音。</p>
+										</div>
+										<div class="synapse-feature__visual piano" aria-hidden="true"></div>
+									</a>
 
 								<a class="synapse-feature" href="#rootsx-exchange">
 									<div class="synapse-feature__body">
@@ -2514,7 +2605,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 								<h3 class="title title--ad">EDITOR'S<br>NOTES</h3>
 								<p class="side-label">未来を覗くものは、資産だけではありません。</p>
 								<div class="side-list">
-									<div class="side-row"><span>Music</span><span class="dots"></span><span>The ONE</span></div>
+										<div class="side-row"><span>Music</span><span class="dots"></span><span>BADCAT</span></div>
 									<div class="side-row"><span>Market</span><span class="dots"></span><span>RootsX</span></div>
 									<div class="side-row"><span>Store</span><span class="dots"></span><span>Future</span></div>
 								</div>
@@ -2525,7 +2616,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<div class="card-special-border">
 								<h3 class="title title--ad">SYNAPSEΞ</h3>
 								<p class="side-label">そのすべてをつなぐポータルです。</p>
-								<p class="side-note">SPACE X PRIVATE ACCESS / The ONE / RootsX EXCHANGE / FUTURE LIFESTYLE STORE</p>
+									<p class="side-note">SPACE X PRIVATE ACCESS / BADCAT / RootsX EXCHANGE / FUTURE LIFESTYLE STORE</p>
 							</div>
 						</div>
 					`;
@@ -2542,6 +2633,29 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 
 				const footerLogo = document.querySelector(".footer-logo .logo-block");
 				if (footerLogo) footerLogo.innerHTML = "<strong>PRIVATE ACCESS PORTAL</strong>";
+
+				const neutralizeLegacyLinks = () => {
+					document.querySelectorAll("a").forEach((link) => {
+						if (link.closest(".newspaper-front")) return;
+						link.removeAttribute("href");
+						link.removeAttribute("target");
+						link.removeAttribute("rel");
+						link.setAttribute("aria-disabled", "true");
+						if (link.dataset.linkDisabled !== "true") {
+							link.dataset.linkDisabled = "true";
+							link.addEventListener("click", (event) => {
+								event.preventDefault();
+								event.stopPropagation();
+							});
+						}
+					});
+				};
+
+				neutralizeLegacyLinks();
+				new MutationObserver(neutralizeLegacyLinks).observe(document.body, {
+					childList: true,
+					subtree: true,
+				});
 			};
 
 			if (document.readyState === "loading") {
