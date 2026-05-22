@@ -740,6 +740,16 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			max-width: 46rem;
 		}
 
+		.front-meta {
+			font-family: "Pressura Mono", monospace;
+			font-size: clamp(.85rem, .95vw, 1.08rem);
+			font-weight: 700;
+			letter-spacing: .08em;
+			line-height: 1.35;
+			margin: 1.15rem 0 0;
+			text-transform: none;
+		}
+
 		.front-spacex {
 			grid-column: 1 / span 3;
 			min-height: 640px;
@@ -757,11 +767,20 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 		.front-spacex .front-title {
 			max-width: 720px;
+			text-transform: none;
+		}
+
+		.front-spacex .front-subtitle {
+			font-family: Portrait, Georgia, serif;
+			font-size: clamp(2.6rem, 4.2vw, 5.6rem);
+			line-height: .95;
+			margin: .55rem 0 0;
+			text-transform: none;
 		}
 
 		.front-spacex .front-jp {
 			font-size: clamp(1.75rem, 2.6vw, 3rem);
-			margin-top: 2.2rem;
+			margin-top: 1.9rem;
 			max-width: 620px;
 		}
 
@@ -799,7 +818,8 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			background: #231f20;
 			color: #fffcf9;
 			grid-column: 1 / span 2;
-			min-height: 390px;
+			grid-row: 3;
+			min-height: 460px;
 			--photo-color-opacity: .86;
 			--photo-color-wash:
 				linear-gradient(76deg, transparent 56%, rgba(255,213,142,.84) 67%, transparent 86%),
@@ -814,6 +834,28 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 		.front-one .image-wash {
 			background: linear-gradient(105deg, rgba(35,31,32,.88), rgba(35,31,32,.58) 48%, rgba(35,31,32,.14));
+		}
+
+		.front-one .front-artist-logo {
+			bottom: 1.55rem;
+			filter: grayscale(1) brightness(1.12) contrast(1.06);
+			height: auto;
+			inset: auto 1.5rem 1.55rem auto;
+			max-width: 48%;
+			object-fit: contain;
+			opacity: .84;
+			pointer-events: none;
+			position: absolute;
+			transform: none;
+			transition: filter 1s ease, opacity 1s ease;
+			width: clamp(9.15rem, 16vw, 14.2rem);
+			z-index: 5;
+		}
+
+		.front-panel:is(:hover, :focus-within, :active, .is-touch-colored) img.front-artist-logo {
+			filter: grayscale(1) brightness(1.22) contrast(1.08);
+			opacity: .97;
+			transform: none;
 		}
 
 		.front-one .front-title,
@@ -939,6 +981,13 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			transform: scale(1.018);
 		}
 
+		.front-one.is-audio-playing img.front-artist-logo {
+			animation: none;
+			filter: grayscale(1) brightness(1.28) contrast(1.1);
+			opacity: 1;
+			transform: none;
+		}
+
 		.front-one.is-audio-playing .image-wash {
 			animation: audioWashBreath 2.8s ease-in-out infinite;
 			opacity: .16;
@@ -1004,7 +1053,9 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			background: #231f20;
 			color: #fffcf9;
 			grid-column: 3 / span 2;
-			min-height: 470px;
+			grid-row: 2 / span 2;
+			min-height: 860px;
+			padding: clamp(2rem, 3vw, 3.45rem);
 			--photo-color-opacity: .88;
 			--photo-color-wash:
 				linear-gradient(14deg, transparent 50%, rgba(235,84,65,.78) 61%, transparent 74%),
@@ -1013,40 +1064,145 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 		}
 
 		.front-roots .image-wash {
-			background: linear-gradient(90deg, rgba(35,31,32,.86), rgba(35,31,32,.52) 42%, rgba(35,31,32,.08));
+			background:
+				linear-gradient(90deg, rgba(35,31,32,.94), rgba(35,31,32,.72) 42%, rgba(35,31,32,.28) 68%, rgba(35,31,32,.08)),
+				linear-gradient(0deg, rgba(35,31,32,.55), transparent 45%);
+		}
+
+		.front-roots .front-title {
+			font-size: clamp(4.3rem, 6vw, 8.2rem);
+			max-width: 760px;
+		}
+
+		.front-roots .front-jp {
+			font-size: clamp(1.3rem, 1.65vw, 2rem);
+			max-width: 620px;
+		}
+
+		.front-roots .front-meta {
+			font-size: clamp(.9rem, .96vw, 1.08rem);
+			letter-spacing: .06em;
+			margin-top: 1.05rem;
+		}
+
+		.front-roots .front-meta + .front-meta {
+			margin-top: .34rem;
+		}
+
+		.front-roots .front-support {
+			border-top: 1px solid rgba(255, 252, 249, .36);
+			font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+			font-size: clamp(1rem, 1.08vw, 1.22rem);
+			font-weight: 700;
+			line-height: 1.75;
+			margin-top: 1.35rem;
+			max-width: 560px;
+			padding-top: 1.1rem;
 		}
 
 		.front-store {
-			grid-column: 1 / span 2;
+			grid-column: 3;
 			grid-row: 4;
 			min-height: 430px;
 			--photo-color-opacity: .88;
 			--photo-color-wash:
-				linear-gradient(84deg, transparent 52%, rgba(255,218,132,.82) 63%, transparent 80%),
-				linear-gradient(102deg, rgba(238,202,154,.98), rgba(183,99,48,.82) 46%, rgba(34,112,150,.78));
-			--photo-wash-hover-opacity: .12;
+				radial-gradient(circle at 46% 24%, rgba(170,127,80,.68) 0 8%, transparent 20%),
+				radial-gradient(circle at 43% 48%, rgba(239,229,204,.84) 0 17%, transparent 36%),
+				radial-gradient(circle at 71% 48%, rgba(129,124,110,.9) 0 24%, transparent 48%),
+				linear-gradient(102deg, rgba(222,213,197,.9), rgba(203,190,167,.78) 46%, rgba(88,89,79,.72));
+			--photo-wash-hover-opacity: .14;
 		}
 
 		.front-store img {
-			object-position: 70% 50%;
+			filter: grayscale(1) contrast(1.2) brightness(.82) sepia(.08);
+			object-position: 58% 50%;
+			opacity: .96;
+		}
+
+		.front-store .image-wash {
+			background: linear-gradient(90deg, rgba(255,252,249,.82), rgba(255,252,249,.48) 48%, rgba(255,252,249,.1));
+		}
+
+		.front-store:is(:hover, :focus-within, :active, .is-touch-colored) img {
+			filter: grayscale(.08) contrast(1.12) brightness(.98) saturate(1.08) sepia(.06);
 		}
 
 		.front-store .front-title {
+			font-size: clamp(2.2rem, 2.8vw, 3.65rem);
+			line-height: .92;
+			max-width: 320px;
+		}
+
+		.front-store .front-jp {
+			font-size: clamp(1rem, 1.15vw, 1.25rem);
+			max-width: 300px;
+		}
+
+		.front-viaiphone {
+			background: #f3f1eb;
+			grid-column: 1 / span 2;
+			grid-row: 2;
+			min-height: 430px;
+			padding: clamp(1.45rem, 2vw, 2.25rem);
+			--photo-color-opacity: 0;
+			--photo-wash-hover-opacity: .16;
+		}
+
+		.front-viaiphone img {
+			filter: none;
+			object-position: 58% 50%;
+			opacity: .96;
+		}
+
+		.front-viaiphone img.viaiphone-color {
+			filter: none;
+			opacity: 0;
+			z-index: 2;
+		}
+
+		.front-viaiphone .image-wash {
+			background:
+				linear-gradient(90deg, rgba(255,252,249,.9), rgba(255,252,249,.58) 42%, rgba(255,252,249,.12)),
+				linear-gradient(0deg, rgba(255,252,249,.22), rgba(255,252,249,0) 58%);
+		}
+
+		.front-viaiphone .front-title {
+			font-size: clamp(3.6rem, 5.2vw, 6.9rem);
+			letter-spacing: 0;
 			max-width: 620px;
+		}
+
+		.front-viaiphone .front-jp {
+			font-size: clamp(1.35rem, 1.8vw, 2.25rem);
+			margin-top: 1.4rem;
+			max-width: 470px;
+		}
+
+		.front-viaiphone:is(:hover, :focus-within, :active, .is-touch-colored) img {
+			filter: none;
+			transform: scale(1.012);
+		}
+
+		.front-viaiphone:is(:hover, :focus-within, :active, .is-touch-colored) img:not(.viaiphone-color) {
+			opacity: 0;
+		}
+
+		.front-viaiphone:is(:hover, :focus-within, :active, .is-touch-colored) img.viaiphone-color {
+			opacity: .98;
 		}
 
 		.front-index {
 			grid-column: 4;
-			grid-row: 3;
-			min-height: 500px;
+			grid-row: 4;
+			min-height: 430px;
 		}
 
 		.front-nfcgate {
 			background: #111;
 			color: #fffcf9;
-			grid-column: 1 / span 3;
-			grid-row: 3;
-			min-height: 460px;
+			grid-column: 1 / span 2;
+			grid-row: 4;
+			min-height: 430px;
 			--photo-color-opacity: .42;
 			--photo-color-wash:
 				linear-gradient(110deg, rgba(0,210,216,.82), rgba(48,82,94,.52) 42%, rgba(176,111,202,.34) 100%),
@@ -1060,14 +1216,34 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			opacity: .86;
 		}
 
+		.front-nfcgate img.nfcgate-service-logo {
+			bottom: 1.7rem;
+			filter: grayscale(1) brightness(1.18) contrast(1.08);
+			height: auto;
+			inset: auto 1.85rem 1.7rem auto;
+			max-width: 42%;
+			object-fit: contain;
+			opacity: .88;
+			pointer-events: none;
+			position: absolute;
+			transform: none;
+			width: clamp(8.5rem, 16vw, 14.5rem);
+			z-index: 5;
+		}
+
+		.front-nfcgate:is(:hover, :focus-within, :active, .is-touch-colored) img.nfcgate-service-logo {
+			filter: grayscale(0) brightness(1.28) contrast(1.05);
+			opacity: 1;
+			transform: none;
+		}
+
 		.front-nfcgate .image-wash {
 			background:
 				linear-gradient(90deg, rgba(255,252,242,.16), rgba(255,252,242,.08) 44%, rgba(255,252,242,.02)),
 				linear-gradient(100deg, rgba(17,17,17,.91), rgba(17,17,17,.58) 46%, rgba(17,17,17,.16));
 		}
 
-		.front-nfcgate::after,
-		.front-pulse::after {
+		.front-nfcgate::after {
 			background:
 				radial-gradient(circle, rgba(255,252,242,.12) 0 .55px, transparent .75px) 0 0 / 4px 4px,
 				repeating-linear-gradient(12deg, rgba(255,252,242,.035) 0 1px, transparent 1px 12px),
@@ -1100,52 +1276,6 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 				0 0 62px rgba(243, 255, 143, .12);
 		}
 
-		.front-pulse {
-			background: #080912;
-			color: #fffcf9;
-			grid-column: 1 / span 4;
-			grid-row: 5;
-			min-height: 520px;
-			--photo-color-opacity: .72;
-			--photo-color-wash:
-				linear-gradient(100deg, rgba(0,231,255,.9), rgba(70,44,118,.42) 42%, rgba(255,68,239,.82) 100%),
-				radial-gradient(circle at 54% 62%, rgba(255,255,255,.62) 0 7%, transparent 30%);
-			--photo-wash-hover-opacity: .18;
-		}
-
-		.front-pulse img {
-			filter: grayscale(1) contrast(1.05) brightness(.78) sepia(.1);
-			object-position: 50% 54%;
-			opacity: .88;
-		}
-
-		.front-pulse .image-wash {
-			background:
-				linear-gradient(90deg, rgba(255,252,242,.14), rgba(255,252,242,.07) 46%, rgba(255,252,242,.02)),
-				linear-gradient(90deg, rgba(8,9,18,.9), rgba(8,9,18,.6) 42%, rgba(8,9,18,.14)),
-				linear-gradient(0deg, rgba(8,9,18,.3), transparent 42%);
-		}
-
-		.front-pulse .front-title {
-			font-size: clamp(4.5rem, 8vw, 10.8rem);
-			letter-spacing: .01em;
-			line-height: .82;
-			max-width: 760px;
-		}
-
-		.front-pulse .front-jp {
-			font-size: clamp(1.55rem, 2.4vw, 3rem);
-			margin-top: 1.1rem;
-			max-width: 620px;
-		}
-
-		.front-pulse:is(:hover, :focus-within, :active, .is-touch-colored) .front-title {
-			color: #fff;
-			text-shadow:
-				0 0 18px rgba(0,238,255,.46),
-				0 0 34px rgba(255,76,248,.38);
-		}
-
 		.front-index .front-title {
 			font-size: clamp(3rem, 4vw, 5.1rem);
 		}
@@ -1172,8 +1302,8 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 		}
 
 		.front-access-copy {
-			grid-column: 3 / span 2;
-			grid-row: 4;
+			grid-column: 1 / span 4;
+			grid-row: 5;
 			min-height: 430px;
 		}
 
@@ -1209,10 +1339,10 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			.front-notes,
 			.front-one,
 			.front-roots,
+			.front-viaiphone,
 			.front-store,
 			.front-index,
 			.front-nfcgate,
-			.front-pulse,
 			.front-access-copy {
 				grid-column: 1;
 				grid-row: auto;
@@ -1326,7 +1456,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-one {
 				min-height: 430px;
-				order: 3;
+				order: 6;
 				padding: 1.25rem;
 			}
 
@@ -1341,18 +1471,24 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 				line-height: 1.6;
 			}
 
+			.front-one .front-artist-logo {
+				bottom: 1.35rem;
+				right: 1.25rem;
+				width: clamp(7.75rem, 34vw, 10.9rem);
+			}
+
 			.front-one img {
 				object-position: 72% 50%;
 			}
 
 			.front-roots {
-				min-height: 440px;
+				min-height: 560px;
 				order: 4;
 				padding: 1.25rem;
 			}
 
 			.front-roots .front-title {
-				font-size: clamp(3.2rem, 13.5vw, 4.5rem);
+				font-size: clamp(2.95rem, 12vw, 4.05rem);
 				line-height: .9;
 				max-width: 310px;
 			}
@@ -1362,13 +1498,54 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 				line-height: 1.6;
 			}
 
+			.front-roots .front-meta {
+				font-size: .82rem;
+				margin-top: .78rem;
+			}
+
+			.front-roots .front-support {
+				font-size: .92rem;
+				line-height: 1.75;
+				margin-top: .95rem;
+				max-width: 310px;
+				padding-top: .85rem;
+			}
+
 			.front-roots img {
 				object-position: 70% 50%;
 			}
 
+			.front-viaiphone {
+				min-height: 430px;
+				order: 3;
+				padding: 1.25rem;
+			}
+
+			.front-viaiphone .front-title {
+				font-size: clamp(3.1rem, 12vw, 4.25rem);
+				line-height: .9;
+				max-width: 330px;
+			}
+
+			.front-viaiphone .front-jp {
+				font-size: 1.05rem;
+				line-height: 1.6;
+				max-width: 280px;
+			}
+
+			.front-viaiphone img {
+				object-position: 47% 50%;
+			}
+
+			.front-viaiphone .image-wash {
+				background:
+					linear-gradient(90deg, rgba(255,252,249,.96), rgba(255,252,249,.68) 48%, rgba(255,252,249,.14)),
+					linear-gradient(0deg, rgba(255,252,249,.2), rgba(255,252,249,0) 58%);
+			}
+
 			.front-store {
 				min-height: 440px;
-				order: 7;
+				order: 5;
 				padding: 1.25rem;
 			}
 
@@ -1383,11 +1560,11 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			}
 
 			.front-store img {
-				object-position: 72% 50%;
+				object-position: 56% 50%;
 			}
 
 			.front-store .image-wash {
-				background: linear-gradient(90deg, rgba(255,252,249,.95), rgba(255,252,249,.7) 48%, rgba(255,252,249,.18));
+				background: linear-gradient(90deg, rgba(255,252,249,.86), rgba(255,252,249,.52) 48%, rgba(255,252,249,.12));
 			}
 
 			.front-notes {
@@ -1420,7 +1597,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-nfcgate {
 				min-height: 430px;
-				order: 5;
+				order: 7;
 				padding: 1.25rem;
 			}
 
@@ -1436,31 +1613,16 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 				max-width: 260px;
 			}
 
+			.front-nfcgate img.nfcgate-service-logo {
+				bottom: 1.25rem;
+				right: 1.25rem;
+				width: clamp(7.2rem, 36vw, 10.8rem);
+			}
+
 			.front-nfcgate img {
 				object-position: 62% 50%;
 			}
 
-			.front-pulse {
-				min-height: 430px;
-				order: 6;
-				padding: 1.25rem;
-			}
-
-			.front-pulse .front-title {
-				font-size: clamp(3.25rem, 16vw, 5.15rem);
-				line-height: .85;
-				max-width: 100%;
-			}
-
-			.front-pulse .front-jp {
-				font-size: 1.1rem;
-				line-height: 1.65;
-				max-width: 280px;
-			}
-
-			.front-pulse img {
-				object-position: 54% 50%;
-			}
 		}
 	</style>
 
@@ -2090,9 +2252,10 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 						<section class="front-panel front-spacex" id="spacex-private-access">
 							<img src="${asset("spacex-private-access.png")}" alt="Vintage monochrome rocket launch illustration">
 							<div class="image-wash"></div>
-							<p class="front-kicker">PRIVATE ACCESS / REAL-WORLD BLOCKCHAIN</p>
-							<h2 class="front-title">SYNAPSE</h2>
-							<p class="front-jp">デジタル資産と実世界の価値をつなぐ。</p>
+							<p class="front-kicker">PRIVATE ACCESS / SPACE FRONTIER</p>
+							<h2 class="front-title">SpaceX</h2>
+							<p class="front-subtitle">Pre-IPO Access</p>
+							<p class="front-jp">未来の可能性への入口。</p>
 						</section>
 
 						<aside class="front-panel front-notes" id="editors-notes">
@@ -2110,6 +2273,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<p class="front-kicker">Quiet Signal</p>
 							<h2 class="front-title front-title--small">The ONE - Piano Version</h2>
 							<p class="front-jp">静けさの中に、立ち上がる力。</p>
+							<img class="front-artist-logo" src="${asset("jyuno-artist-logo.png")}" alt="JYuno artist logo">
 							<button class="front-audio-button" type="button" data-audio-src="${audioAsset("the-one-piano-premaster.mp3")}" aria-label="The ONE - Piano Versionを再生する">再生する</button>
 						</section>
 
@@ -2119,10 +2283,22 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<p class="front-kicker">Market / Exchange / Route</p>
 							<h2 class="front-title front-title--small">RootsX Exchange</h2>
 							<p class="front-jp">次世代のマーケットへ出航する。</p>
+							<p class="front-meta">rootsx.ai for PC</p>
+							<p class="front-meta">Android App for VIAIPHONE・Smartphone</p>
+							<p class="front-support">PCでマーケットを広く確認。<br>Androidアプリで日常の中からすぐにアクセス。<br>AI搭載スマートフォンVIAIPHONEにも対応し、<br>取引体験をより身近にします。</p>
+						</section>
+
+						<section class="front-panel front-viaiphone" id="viaiphone">
+							<img src="${asset("viaiphone-mono.png")}" alt="Monochrome VIAIPHONE AI smartphone product image">
+							<img class="viaiphone-color" src="${asset("viaiphone-color.png")}" alt="" aria-hidden="true">
+							<div class="image-wash"></div>
+							<p class="front-kicker">AI PHONE / NEXT INTERFACE</p>
+							<h2 class="front-title front-title--small">VIAIPHONE</h2>
+							<p class="front-jp">手のひらに、次の知性を。</p>
 						</section>
 
 						<section class="front-panel front-store" id="future-lifestyle-store">
-							<img src="${asset("future-lifestyle-store.png")}" alt="Vintage monochrome curated future lifestyle store still life">
+							<img src="${asset("future-lifestyle-store-apparel.png")}" alt="Minimal apparel objects for a future lifestyle store">
 							<div class="image-wash"></div>
 							<p class="front-kicker">Objects For Tomorrow</p>
 							<h2 class="front-title front-title--small">Future Lifestyle Store</h2>
@@ -2134,9 +2310,9 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<a class="front-index-row" href="#spacex-private-access"><span>SYNAPSE</span><span></span><span>PRIVATE</span></a>
 							<a class="front-index-row" href="#the-one"><span class="brand-case">The ONE</span><span></span><span>Piano</span></a>
 							<a class="front-index-row" href="#rootsx-exchange"><span class="brand-case">RootsX</span><span></span><span>EXCHANGE</span></a>
+							<a class="front-index-row" href="#viaiphone"><span>VIAIPHONE</span><span></span><span>AI PHONE</span></a>
 							<a class="front-index-row" href="#future-lifestyle-store"><span>FUTURE</span><span></span><span>STORE</span></a>
 							<a class="front-index-row" href="#nfcgate"><span>NFCGATE</span><span></span><span>ACCESS</span></a>
-							<a class="front-index-row" href="#pulse"><span>PULSE</span><span></span><span>CULTURE</span></a>
 						</aside>
 
 						<section class="front-panel front-nfcgate" id="nfcgate">
@@ -2145,21 +2321,14 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<p class="front-kicker">Digital Access / NFC Experience</p>
 							<h2 class="front-title front-title--small">NFC GATE</h2>
 							<p class="front-jp">かざすだけで、特別な体験が始まる。</p>
-						</section>
-
-						<section class="front-panel front-pulse" id="pulse">
-							<img src="${asset("pulse-cultural-exchange.svg")}" alt="Neon futuristic city avenue for cultural exchange">
-							<div class="image-wash"></div>
-							<p class="front-kicker">Cultural Future Exchange</p>
-							<h2 class="front-title front-title--small">PULSE</h2>
-							<p class="front-jp">人と文化が交流する場所</p>
+							<img class="nfcgate-service-logo" src="${asset("nfcgate-service-logo.png")}" alt="NFC GATE service logo">
 						</section>
 
 						<section class="front-panel front-access-copy">
 							<p class="front-kicker">PRIVATE ACCESS JOURNAL</p>
 							<div class="front-copy">
 								<p>分散する未来への入口をひとつに集約しました。<br>情報をただ並べるのではなく、<br>一つひとつの入口を、次の選択へつながる形で届けます。</p>
-								<p>Private Access、The ONE、RootsX Exchange、Future Lifestyle Store、NFCGATE、PULSE。</p>
+								<p>Private Access、The ONE、RootsX Exchange、VIAIPHONE、Future Lifestyle Store、NFCGATE。</p>
 								<p>それぞれ異なる扉でありながら、<br>すべては新しい未来体験へとつながっています。</p>
 							</div>
 						</section>
