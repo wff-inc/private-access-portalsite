@@ -715,6 +715,24 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			opacity: var(--photo-wash-hover-opacity, .34);
 		}
 
+		.front-panel img.panel-brand-logo {
+			height: auto;
+			inset: auto clamp(1.25rem, 2vw, 2rem) clamp(1.25rem, 2vw, 2rem) auto;
+			max-height: 34%;
+			object-fit: contain;
+			opacity: .7;
+			pointer-events: none;
+			transform: none;
+			width: clamp(7rem, 14vw, 13rem);
+			z-index: 5;
+		}
+
+		.front-panel:is(:hover, :focus-within, :active, .is-touch-colored) img.panel-brand-logo {
+			filter: grayscale(0) contrast(1.12) brightness(1.04) saturate(1.28);
+			opacity: .94;
+			transform: translateY(-2px);
+		}
+
 		.front-kicker {
 			font-family: "Pressura Mono", monospace;
 			font-size: clamp(.95rem, 1vw, 1.25rem);
@@ -1089,6 +1107,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			grid-row: 2 / span 2;
 			min-height: 860px;
 			padding: clamp(2rem, 3vw, 3.45rem);
+			padding-bottom: clamp(8rem, 9vw, 12rem);
 			--photo-color-opacity: .88;
 			--photo-color-wash:
 				linear-gradient(14deg, transparent 50%, rgba(235,84,65,.78) 61%, transparent 74%),
@@ -1131,6 +1150,20 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			margin-top: 1.35rem;
 			max-width: 560px;
 			padding-top: 1.1rem;
+		}
+
+		.front-roots img.rootsx-panel-logo {
+			bottom: clamp(1.45rem, 2vw, 2.2rem);
+			filter: grayscale(1) contrast(1.14) brightness(.82) sepia(.08);
+			max-height: 29%;
+			opacity: .58;
+			right: clamp(1.35rem, 2vw, 2.3rem);
+			width: clamp(9rem, 14vw, 13.5rem);
+		}
+
+		.front-roots:is(:hover, :focus-within, :active, .is-touch-colored) img.rootsx-panel-logo {
+			filter: grayscale(0) contrast(1.08) brightness(1.04) saturate(1.18);
+			opacity: .92;
 		}
 
 		.front-store {
@@ -1177,6 +1210,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			grid-row: 2;
 			min-height: 430px;
 			padding: clamp(1.45rem, 2vw, 2.25rem);
+			padding-bottom: clamp(5.8rem, 8vw, 7.8rem);
 			--photo-color-opacity: 0;
 			--photo-wash-hover-opacity: .16;
 		}
@@ -1216,12 +1250,28 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			transform: scale(1.012);
 		}
 
-		.front-viaiphone:is(:hover, :focus-within, :active, .is-touch-colored) img:not(.viaiphone-color) {
+		.front-viaiphone:is(:hover, :focus-within, :active, .is-touch-colored) img:not(.viaiphone-color, .viaiphone-panel-logo) {
 			opacity: 0;
 		}
 
 		.front-viaiphone:is(:hover, :focus-within, :active, .is-touch-colored) img.viaiphone-color {
 			opacity: .98;
+		}
+
+		.front-viaiphone img.viaiphone-panel-logo {
+			bottom: clamp(1.25rem, 1.8vw, 1.8rem);
+			filter: grayscale(1) contrast(1.04) brightness(.72) sepia(.05);
+			left: clamp(1.45rem, 2vw, 2.2rem);
+			max-height: 21%;
+			opacity: .64;
+			right: auto;
+			width: clamp(10.8rem, 18vw, 17rem);
+		}
+
+		.front-viaiphone:is(:hover, :focus-within, :active, .is-touch-colored) img.viaiphone-panel-logo {
+			filter: grayscale(0) contrast(1.07) brightness(.96) saturate(1.22);
+			opacity: .94;
+			transform: translateY(-2px);
 		}
 
 		.front-index {
@@ -1533,6 +1583,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 					min-height: 560px;
 				order: 4;
 				padding: 1.25rem;
+				padding-bottom: 7.3rem;
 			}
 
 			.front-roots .front-title {
@@ -1563,10 +1614,18 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 				object-position: 70% 50%;
 			}
 
+			.front-roots img.rootsx-panel-logo {
+				bottom: 1.05rem;
+				max-height: 19%;
+				right: 1.05rem;
+				width: clamp(5.8rem, 28vw, 7.7rem);
+			}
+
 			.front-viaiphone {
 				min-height: 430px;
 				order: 3;
 				padding: 1.25rem;
+				padding-bottom: 5.4rem;
 			}
 
 			.front-viaiphone .front-title {
@@ -1583,6 +1642,13 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-viaiphone img {
 				object-position: 47% 50%;
+			}
+
+			.front-viaiphone img.viaiphone-panel-logo {
+				bottom: 1.05rem;
+				left: 1.15rem;
+				max-height: 15%;
+				width: clamp(8.4rem, 45vw, 11rem);
 			}
 
 			.front-viaiphone .image-wash {
@@ -2347,6 +2413,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<p class="front-meta">rootsx.ai for PC</p>
 							<p class="front-meta">Android App for VIAIPHONE・Smartphone</p>
 							<p class="front-support">現物、先物、オプションなど、<br>多彩な市場へアクセス。<br><br>画面を広く使ってチャート分析ができる「PC版」からリリース。<br>続いてAndroid Appを展開し、VIAIPHONE・Smartphoneを通して、<br>マーケットをより日常の中へ。</p>
+							<img class="panel-brand-logo rootsx-panel-logo" src="${asset("rootsx-logo.png")}" alt="" aria-hidden="true">
 						</section>
 
 						<section class="front-panel front-viaiphone" id="viaiphone"${panelAttrs("viaiphone", "VIAIPHONEの外部サイトを開く")}>
@@ -2356,6 +2423,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<p class="front-kicker">AI PHONE / NEXT INTERFACE</p>
 							<h2 class="front-title front-title--small">VIAIPHONE</h2>
 							<p class="front-jp">手のひらに、次の知性を。</p>
+							<img class="panel-brand-logo viaiphone-panel-logo" src="${asset("viaiphone-logo.png")}" alt="" aria-hidden="true">
 						</section>
 
 						<section class="front-panel front-store" id="future-lifestyle-store"${panelAttrs("future", "Future Lifestyle Storeの外部サイトを開く")}>
