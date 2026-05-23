@@ -20,25 +20,12 @@ GitHubアップロード用の静的サイト一式です。
 
 ```js
 const panelLinks = {
-  spacex: "",
+  spacex: "https://apply.synapse-m.info",
   viaiphone: "",
   rootsx: "",
   badcat: "",
-  nfcgate: "",
-  future: "",
-};
-```
-
-例:
-
-```js
-const panelLinks = {
-  spacex: "https://example.com/spacex",
-  viaiphone: "https://example.com/viaiphone",
-  rootsx: "https://example.com/rootsx",
-  badcat: "https://example.com/badcat",
-  nfcgate: "https://example.com/nfcgate",
-  future: "https://example.com/future",
+  nfcgate: "https://nfcgate.jp/",
+  future: "https://world-life.site",
 };
 ```
 

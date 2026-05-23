@@ -2295,12 +2295,12 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 				const audioAsset = (name) => new URL("assets/audio/" + name, window.location.href).href;
 					const panelLinks = {
 						// 外部リンク先が決まったら、各項目に https:// から始まるURLを入れてください。
-						spacex: "",
+							spacex: "https://apply.synapse-m.info",
 						viaiphone: "",
 						rootsx: "",
 						badcat: "",
-						nfcgate: "",
-						future: "",
+							nfcgate: "https://nfcgate.jp/",
+							future: "https://world-life.site",
 					};
 				const escapeAttr = (value) => String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
 				const panelAttrs = (key, label) => {
@@ -2346,7 +2346,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<p class="front-jp">次世代のマーケットへ出航する。</p>
 							<p class="front-meta">rootsx.ai for PC</p>
 							<p class="front-meta">Android App for VIAIPHONE・Smartphone</p>
-							<p class="front-support">PCでマーケットを広く確認。<br>Androidアプリで日常の中からすぐにアクセス。<br>AI搭載スマートフォンVIAIPHONEにも対応し、<br>取引体験をより身近にします。</p>
+							<p class="front-support">現物、先物、オプションなど、<br>多彩な市場へアクセス。<br><br>Desktopでチャートや市場情報を確認。<br>Android Appで日常の中からスムーズに操作。<br><br>取引スタイルに合わせた環境で、<br>日々のマーケットアクセスをサポートします。</p>
 						</section>
 
 						<section class="front-panel front-viaiphone" id="viaiphone"${panelAttrs("viaiphone", "VIAIPHONEの外部サイトを開く")}>
@@ -2368,7 +2368,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 
 						<aside class="front-panel front-index" id="access-index">
 							<h2 class="front-title front-title--small">ACCESS<br>INDEX</h2>
-							<button class="front-index-row" type="button" data-scroll-target="spacex-private-access"><span>SYNAPSE</span><span></span><span>PRIVATE</span></button>
+							<button class="front-index-row" type="button" data-scroll-target="spacex-private-access"><span class="brand-case">SpaceX</span><span></span><span>PRIVATE</span></button>
 							<button class="front-index-row" type="button" data-scroll-target="badcat"><span>BADCAT</span><span></span><span>SOUND</span></button>
 							<button class="front-index-row" type="button" data-scroll-target="rootsx-exchange"><span class="brand-case">RootsX</span><span></span><span>EXCHANGE</span></button>
 							<button class="front-index-row" type="button" data-scroll-target="viaiphone"><span>VIAIPHONE</span><span></span><span>AI PHONE</span></button>
