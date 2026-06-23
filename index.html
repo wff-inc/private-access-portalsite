@@ -1153,17 +1153,17 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 		}
 
 		.front-roots img.rootsx-panel-logo {
-			bottom: clamp(1.45rem, 2vw, 2.2rem);
-			filter: grayscale(1) contrast(1.14) brightness(.82) sepia(.08);
-			max-height: 29%;
-			opacity: .58;
+			bottom: clamp(1.6rem, 2vw, 2.25rem);
+			filter: brightness(0) invert(1) contrast(1.05);
+			max-height: 18%;
+			opacity: .78;
 			right: clamp(1.35rem, 2vw, 2.3rem);
-			width: clamp(9rem, 14vw, 13.5rem);
+			width: clamp(15rem, 25vw, 24rem);
 		}
 
 		.front-roots:is(:hover, :focus-within, :active, .is-touch-colored) img.rootsx-panel-logo {
-			filter: grayscale(0) contrast(1.08) brightness(1.04) saturate(1.18);
-			opacity: .92;
+			filter: brightness(0) invert(1) contrast(1.08);
+			opacity: .94;
 		}
 
 		.front-store {
@@ -1176,7 +1176,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 				radial-gradient(circle at 43% 48%, rgba(239,229,204,.84) 0 17%, transparent 36%),
 				radial-gradient(circle at 71% 48%, rgba(129,124,110,.9) 0 24%, transparent 48%),
 				linear-gradient(102deg, rgba(222,213,197,.9), rgba(203,190,167,.78) 46%, rgba(88,89,79,.72));
-			--photo-wash-hover-opacity: .14;
+			--photo-wash-hover-opacity: .52;
 		}
 
 		.front-store img {
@@ -1191,6 +1191,13 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 		.front-store:is(:hover, :focus-within, :active, .is-touch-colored) img {
 			filter: grayscale(.08) contrast(1.12) brightness(.98) saturate(1.08) sepia(.06);
+		}
+
+		.front-store:is(:hover, :focus-within, :active, .is-touch-colored) .image-wash {
+			background:
+				linear-gradient(90deg, rgba(255,252,249,.95), rgba(255,252,249,.7) 48%, rgba(255,252,249,.18) 76%, rgba(255,252,249,.04)),
+				linear-gradient(0deg, rgba(255,252,249,.24), rgba(255,252,249,0) 58%);
+			opacity: .68;
 		}
 
 		.front-store .front-title {
@@ -1616,9 +1623,9 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 			.front-roots img.rootsx-panel-logo {
 				bottom: 1.05rem;
-				max-height: 19%;
+				max-height: 13%;
 				right: 1.05rem;
-				width: clamp(5.8rem, 28vw, 7.7rem);
+				width: clamp(11rem, 58vw, 14.2rem);
 			}
 
 			.front-viaiphone {
@@ -1664,7 +1671,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 			}
 
 			.front-store .front-title {
-				font-size: clamp(3.15rem, 13vw, 4.35rem);
+				font-size: clamp(2.65rem, 10.8vw, 3.65rem);
 				line-height: .9;
 				max-width: 320px;
 			}
@@ -2361,12 +2368,12 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 				const audioAsset = (name) => new URL("assets/audio/" + name, window.location.href).href;
 					const panelLinks = {
 						// 外部リンク先が決まったら、各項目に https:// から始まるURLを入れてください。
-							spacex: "https://apply.synapse-m.info",
+							spacex: "",
 						viaiphone: "",
 						rootsx: "",
 						badcat: "",
 							nfcgate: "https://nfcgate.jp/",
-							future: "https://world-life.site",
+							future: "",
 					};
 				const escapeAttr = (value) => String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
 				const panelAttrs = (key, label) => {
@@ -2413,7 +2420,7 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 							<p class="front-meta">rootsx.ai for PC</p>
 							<p class="front-meta">Android App for VIAIPHONE・Smartphone</p>
 							<p class="front-support">現物、先物、オプションなど、<br>多彩な市場へアクセス。<br><br>画面を広く使ってチャート分析ができる「PC版」からリリース。<br>続いてAndroid Appを展開し、VIAIPHONE・Smartphoneを通して、<br>マーケットをより日常の中へ。</p>
-							<img class="panel-brand-logo rootsx-panel-logo" src="${asset("rootsx-logo.png")}" alt="" aria-hidden="true">
+							<img class="panel-brand-logo rootsx-panel-logo" src="${asset("rootsx-logo-orange.png")}" alt="" aria-hidden="true">
 						</section>
 
 						<section class="front-panel front-viaiphone" id="viaiphone"${panelAttrs("viaiphone", "VIAIPHONEの外部サイトを開く")}>
@@ -2427,11 +2434,11 @@ https://www.seaharvest.net.au/wp-content/themes/seaharvest/img/assets/built/comp
 						</section>
 
 						<section class="front-panel front-store" id="future-lifestyle-store"${panelAttrs("future", "Future Lifestyle Storeの外部サイトを開く")}>
-							<img src="${asset("future-lifestyle-store-apparel.png")}" alt="Minimal apparel objects for a future lifestyle store">
+							<img src="${asset("future-lifestyle-store-ec.png")}" alt="Future Lifestyle Store apparel product image">
 							<div class="image-wash"></div>
-							<p class="front-kicker">Objects For Tomorrow</p>
-							<h2 class="front-title front-title--small">Future Lifestyle Store</h2>
-							<p class="front-jp">未来の体験を、日常に贈る。</p>
+							<p class="front-kicker">APPAREL / COLLECTION</p>
+							<h2 class="front-title front-title--small">CREATIVE<br>DESTRUCTION</h2>
+							<p class="front-jp">既存を壊し、<br>新しい価値をまとう。</p>
 						</section>
 
 						<aside class="front-panel front-index" id="access-index">

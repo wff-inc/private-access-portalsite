@@ -5,7 +5,7 @@ GitHubアップロード用の静的サイト一式です。
 ## 構成
 
 - `index.html` - トップページ本体
-- `assets/generated/` - 各パネル画像
+- `assets/generated/` - 各パネル画像、パネル内ロゴ
 - `assets/audio/` - BADCAT のMP3
 - `assets/logo/` - 左上ロゴ、ファビコン、Apple touch icon
 
@@ -20,20 +20,20 @@ GitHubアップロード用の静的サイト一式です。
 
 ```js
 const panelLinks = {
-  spacex: "https://apply.synapse-m.info",
+  spacex: "",
   viaiphone: "",
   rootsx: "",
   badcat: "",
   nfcgate: "https://nfcgate.jp/",
-  future: "https://world-life.site",
+  future: "",
 };
 ```
 
+現在リンクが有効なのは `NFC GATE` のみです。
 BADCAT の再生ボタンは、パネルリンクとは別に動作します。
 
 ## 注意
 
 - `index.html` と `assets` の相対位置は変えないでください。
 - このサイトは静的HTMLなので、WordPressテーマではありません。
-- 旧サイト由来のリンクは無効化し、トップページのパネルだけ外部リンク設定できる構成にしています。
 - GitHub Pages / Vercel / Netlify などの静的ホスティングで公開できます。
